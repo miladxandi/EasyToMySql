@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace EasyToMySql
 {
-    public class Main
+    public class Connect
     {
         private string[] _Value;
         private string _Host;
@@ -51,7 +51,7 @@ namespace EasyToMySql
         public string queryInsert { get => _Insert; set => _Insert = value; }
         public bool Encrypt { get => _Encrypt; set => _Encrypt = value; }
         public MySqlCommand Command { get => _Command; set => _Command = value; }
-        public string Open(string oHost, string oDatabase, string oCharset, string oUsername, string oPassword, bool oEncrypt)
+        public string Open(string oHost, string oDatabase, string oCharset, string oUsername, string oPassword, bool oEncrypt = false)
         {
             Host = oHost;
             Database = oDatabase;
